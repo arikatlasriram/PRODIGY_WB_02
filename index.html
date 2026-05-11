@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prodigy Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="background-elements">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    
+    <main class="app-container">
+      <header class="app-header">
+        <h1>Task-02</h1>
+        <h2>Stopwatch Application</h2>
+        <div class="header-line"></div>
+      </header>
+
+      <div class="stopwatch-card glass-panel">
+        <div class="display-container">
+          <div class="time-display" id="time-display">
+            <span class="time-part" id="minutes">00</span><span class="colon">:</span><span class="time-part" id="seconds">00</span><span class="colon">:</span><span class="time-part ms" id="milliseconds">00</span>
+          </div>
+          <div class="current-lap-display" id="current-lap-display">Lap 1</div>
+        </div>
+
+        <div class="controls">
+          <button id="btn-lap-reset" class="control-btn secondary-btn">Lap</button>
+          <button id="btn-start-pause" class="control-btn primary-btn play">
+            <span class="icon-play">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>
+            </span>
+            <span class="icon-pause" style="display: none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="currentColor"/></svg>
+            </span>
+            <span id="start-pause-text">Start</span>
+          </button>
+        </div>
+
+        <div class="laps-container">
+          <div class="laps-header">
+            <span>Lap</span>
+            <span>Lap Time</span>
+            <span>Total Time</span>
+          </div>
+          <ul class="laps-list" id="laps-list">
+            <!-- Laps will be injected here via JS -->
+          </ul>
+        </div>
+      </div>
+      
+      <footer class="app-footer">
+        PRODIGY INFOTECH
+      </footer>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
